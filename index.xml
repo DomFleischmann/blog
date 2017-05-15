@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dominik&#39;s Blog</title>
-    <link>http://domfleischmann.github.io/blog/</link>
+    <link>https://domfleischmann.github.io/blog/</link>
     <description>Recent content on Dominik&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 May 2017 11:23:23 +0200</lastBuildDate>
     
-	<atom:link href="http://domfleischmann.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://domfleischmann.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How I built my Blog</title>
-      <link>http://domfleischmann.github.io/blog/post/building-my-blog/</link>
+      <link>https://domfleischmann.github.io/blog/post/building-my-blog/</link>
       <pubDate>Mon, 15 May 2017 11:23:23 +0200</pubDate>
       
-      <guid>http://domfleischmann.github.io/blog/post/building-my-blog/</guid>
+      <guid>https://domfleischmann.github.io/blog/post/building-my-blog/</guid>
       <description>So this is my first blog post on my freshly made Blog, and what better way to start than going full meta and talk about how i built it.
 Gotta go fast! One thing that I made priority when building this blog was making it pretty light and fast inspired by this article. What I took from it is that today&amp;rsquo;s websites are way to bloated and that prevents a lot of people with slow internet speeds of not being to enjoy them.</description>
     </item>
