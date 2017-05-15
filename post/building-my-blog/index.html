@@ -27,21 +27,26 @@
 
 <h3 id="gotta-go-fast">Gotta go fast!</h3>
 
-<p>One thing that I made priority when building this blog was making it pretty light and fast inspired by <a href="https://jacquesmattheij.com/the-fastest-blog-in-the-world">this</a> article. What I took from it is that today&rsquo;s websites are way to bloated and that prevents a lot of people with slow internet speeds of not being to enjoy them. So I proposed myself to build a simple static website with hugo and without using any javascript.So although i&rsquo;m a programmer and using javascript for some little stuff would have been fun I limited myself with CSS and HTML.</p>
+<p>One thing that I made priority when building this blog was making it pretty light and fast inspired by <a href="https://jacquesmattheij.com/the-fastest-blog-in-the-world">this</a> article. What I took from it is that today&rsquo;s websites are way to bloated and that prevents a lot of people with slow internet speeds of not being to enjoy them. So I proposed myself to build a simple static website with Hugo and without using any Javascript.So although I&rsquo;m a programmer and using Javascript for some little stuff would have been fun I limited myself with CSS and HTML.</p>
 
 <h3 id="using-hugo">Using Hugo</h3>
 
-<p>Hugo is a pretty cool static website generator that I also found in the article above. Although I first found the structure a little confusing, I quickly found my way around it and made a really basic theme with the <a href="https://themes.gohugo.io/blank/">blank</a> theme. For the blog posts, hugo parses a markdown syntax into html, so I am starting to learn markdown at the same time. Maybe that will help me to finally make some more elaborate README&rsquo;s for my Github projects.</p>
+<p>Hugo is a pretty cool static website generator that I also found in the article above. Although I first found the structure a little confusing, I quickly found my way around it and made a really basic theme with the <a href="https://themes.gohugo.io/blank/">blank</a> theme. For the blog posts, Hugo parses a markdown syntax into HTML, so I am starting to learn markdown at the same time. Maybe that will help me to finally make some more elaborate README&rsquo;s for my Github projects.</p>
 
 <h3 id="using-github-pages-and-automating-the-process">Using Github Pages and automating the process.</h3>
 
-<p>For hosting for now I chose Github Pages although I am planning to migrate it al later on to a paid hosting service. The process of starting it was really easy following <a href="https://pages.github.com/">this</a> instructions. Later I made this simple bash script inspired by the <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo/Github tutorial</a>.</p>
+<p>For hosting for now I chose Github Pages although I am planning to migrate it all later on to a paid hosting service. The process of starting it was really easy following <a href="https://pages.github.com/">this</a> instructions. Later I made this simple bash script inspired by the <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo/Github tutorial</a>.</p>
 
 <pre><code class="language-bash">#!/bin/sh
+#Enter directory were the git repo is
 cd ~/web/blog
+#delete everything except the .git directory
 find . -path ./.git -prune -o -exec rm -rf {} \; 2&gt; /dev/null
+#Enter the hugo directory
 cd ~/blog
+#Generate static website
 hugo -t theme
+#Move generated files to other directory
 cp -b -r public/* ~/web/blog
 </code></pre>
 
