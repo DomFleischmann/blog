@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>How I built my Blog</title>
+	
+	
+	<link rel="stylesheet" href="css/style.css">
+	
+	<meta name="generator" content="Hugo 0.21-DEV" />
+</head>
+<body>
+	<header>
+		  <h1><a href="http://domfleischmann.github.io/blog">Dominik&#39;s Blog</a></h1>
+	</header>
+
+	<main>
+		<article>
+			<h1>How I built my Blog</h1>
+			<time>15.05.2017 11:23</time>
+			<div>
+				
+
+<p>So this is my first blog post on my freshly made Blog, and what better way to start  than going full meta and talk about how i built it.</p>
+
+<h3 id="gotta-go-fast">Gotta go fast!</h3>
+
+<p>One thing that I made priority when building this blog was making it pretty light and fast inspired by <a href="https://jacquesmattheij.com/the-fastest-blog-in-the-world">this</a> article. What I took from it is that today&rsquo;s websites are way to bloated and that prevents a lot of people with slow internet speeds of not being to enjoy them. So I proposed myself to build a simple static website with hugo and without using any javascript.So although i&rsquo;m a programmer and using javascript for some little stuff would have been fun I limited myself with CSS and HTML.</p>
+
+<h3 id="using-hugo">Using Hugo</h3>
+
+<p>Hugo is a pretty cool static website generator that I also found in the article above. Although I first found the structure a little confusing, I quickly found my way around it and made a really basic theme with the <a href="https://themes.gohugo.io/blank/">blank</a> theme. For the blog posts, hugo parses a markdown syntax into html, so I am starting to learn markdown at the same time. Maybe that will help me to finally make some more elaborate README&rsquo;s for my Github projects.</p>
+
+<h3 id="using-github-pages-and-automating-the-process">Using Github Pages and automating the process.</h3>
+
+<p>For hosting for now I chose Github Pages although I am planning to migrate it al later on to a paid hosting service. The process of starting it was really easy following <a href="https://pages.github.com/">this</a> instructions. Later I made this simple bash script inspired by the <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo/Github tutorial</a>.</p>
+
+<pre><code class="language-bash">#!/bin/sh
+cd ~/web/blog
+find . -path ./.git -prune -o -exec rm -rf {} \; 2&gt; /dev/null
+cd ~/blog
+hugo -t theme
+cp -b -r public/* ~/web/blog
+</code></pre>
+
+<p>This generates and moves the public folder (the static website that hugo generates) to a separate folder where I mantain the git repository for the website. After that i only have to commit and push the changes and it&rsquo;s done!</p>
+
+			</div>
+			<div>
+				<ul id="tags">
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<p>&copy; 2017 <a href="http://domfleischmann.github.io/blog">Dominik&#39;s Blog</a>  | <a href="https://github.com/DomFleischmann">My Github </a></p>
+	</footer>
+</body>
+</html>
+
