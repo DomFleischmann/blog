@@ -1,6 +1,10 @@
 a {
     text-decoration:inherit;
     color: inherit;
+    
+}
+a:hover {
+    color: #2d2d2d;
 }
 
 h1 {
