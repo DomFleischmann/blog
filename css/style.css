@@ -1,10 +1,10 @@
 a {
     text-decoration:inherit;
-    color: #2d2d2d;
+    color: inherit;
     
 }
 a:hover {
-    color: black;
+    color: #2d2d2d;
 }
 
 h1 {
@@ -41,20 +41,4 @@ body {
     margin:auto;
     display:table;
     font-size:15px;
-}
-
-input {
-    display: block;
-    width: 100%;
-    margin: 4px;
-}
-
-#post-button {
-    width:102.5%;
-}
-
-textarea {
-    display:block;
-    width: 102%;
-    margin:4px;
 }
